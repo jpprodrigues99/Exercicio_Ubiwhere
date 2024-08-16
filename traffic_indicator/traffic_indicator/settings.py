@@ -14,6 +14,9 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.9.1_1/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'traffic',
+    'rest_framework',
+    'django.contrib.gis',
+    'drf_yasg',
+   
 ]
 
 MIDDLEWARE = [
@@ -75,8 +83,12 @@ WSGI_APPLICATION = 'traffic_indicator.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'traffic_indicator',
+        'USER': 'postgres',
+        'PASSWORD': 'joao',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
