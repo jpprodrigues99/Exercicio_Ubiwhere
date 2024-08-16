@@ -1,6 +1,6 @@
 # Tráfego Rodoviário API
 
-Este projeto desenvolve uma API REST utilizando Django Rest Framework para alimentar uma dashboard de monitoramento de tráfego rodoviário. A API fornece informações detalhadas sobre segmentos de estrada, incluindo a velocidade dos veículos, a caracterização da intensidade do tráfego e a localização.
+Este projeto desenvolve uma API REST utilizando Django Rest Framework para alimentar uma dashboard de gestão de tráfego rodoviário. A API fornece informações detalhadas sobre segmentos de estrada, incluindo a velocidade dos veículos, a caracterização da intensidade do tráfego e a localização.
 
 ## Tabela de Conteúdos
 
@@ -13,7 +13,7 @@ Este projeto desenvolve uma API REST utilizando Django Rest Framework para alime
 
 ### Endpoints
 
-A API possui os seguintes endpoints principais, gerenciados através de um `ModelViewSet`:
+A API possui os seguintes endpoints principais, através de um `ModelViewSet`:
 
 - **Segmentos de Estrada**
   - `/traffic/roadsegments/`: Lista todos os segmentos de estrada.
@@ -33,9 +33,9 @@ Os tipos de utilizadores e suas permissões são:
 
 ### Caracterização da Intensidade do Tráfego
 
-A intensidade do tráfego é inferida a partir da velocidade média dos veículos e classificada conforme a tabela abaixo:
+A intensidade do tráfego é inferida a partir da velocidade dos veículos e classificada conforme a tabela abaixo:
 
-| Velocidade Média | Intensidade |
+| Velocidade | Intensidade |
 |------------------|-------------|
 | ≤ 20 km/h        | Elevada     |
 | > 20 e ≤ 50 km/h | Média       |
